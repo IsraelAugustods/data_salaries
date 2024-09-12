@@ -22,23 +22,37 @@ O ***Kaggle*** é uma plataforma online voltada para a comunidade de ciência de
 ## Destaques do Projeto
 
 ## Estatisca
-Data Analyst < Data Sciestist
-- Como eu quero comparar duas médias o teste estatistico ideial é o teste t, que possui alguns pressupostos: Distribuição normal e homogenização da variancia
-- 
-- Primeiramente, fui verificar se dos dados tinham distruição normal, dessa forma foi feito o teste Kolmogorov-Smirnov, que mostra isso estatisticamente, e teve esse resultado:
+
+- Um cientista de dados ganha mais, na média, do que um análista de dados?
+
+<p align="center">
+  <img alt="g1" width="50%" src="https://github.com/user-attachments/assets/868e7f34-be47-4988-ad2d-6133adceb681">
+</p>
+
+- De acordo com a tabela, os cientistas de dados ganham mais. Porém precisamos olhar isso de modo estatistico para poder afirmar essa inforamção.
+- Como eu quero descobrir se o cientista de dados ganha mais que o análista de dados na média, o teste estatistico ideial é o teste t, que possui alguns pressupostos: Distribuição normal dos dados e homogenização da variancia
+- Primeiramente, verifiquei se dos dados tinham distruição normal, dessa forma foi feito o teste Shapiro-Wilk, que mostra isso estatisticamente, e teve esse resultado:
 
 <p align="center">
   <img alt="r2" width="50%" src="https://github.com/user-attachments/assets/94d0cc61-dabe-466a-89a2-b94fc76135b4">
 </p>
-Com base nesse tabela é possivel afirmar que os dados não possuem distribuição normal. Isso ocorre devido o p-valor menor do que 0.05. Logo nós rejeitamos a hipotese nula (que os dados são normais). 
-É importante salientar que eu utilizei o teste de Shapiro-Wilk já que estou trabalhando com esse dataset que possui poucos dados. Caso tivessemos mais dados o teste correto seria o de Kolmogorov-Smirnov. 
+- Com base nesse tabela é possivel afirmar que os dados não possuem distribuição normal. Isso ocorre devido o p-valor menor do que 0.05. Logo nós rejeitamos a hipotese nula (que os dados são normais). Um dos pressupostos para o test t, que é a normalidade nos dados não foi atingido, porém nesse caso me utilizei do teorema do Limite do Central, que pode ser aplicado, ja que as variaveis tem muitos valores e por isso considerei que os dados tinham uma distruição normal. Quando utilizamos isso, é imporntante analisar os graficos de frequencia  de cada uma das variaveis. 
+
+<p align="center">
+  <img alt="g1" width="50%" src="">
+</p>
+
+
+- É importante salientar que eu utilizei o teste de Shapiro-Wilk já que estou trabalhando com esse dataset que possui poucos dados. Caso tivessemos mais dados o teste correto seria o de Kolmogorov-Smirnov. 
+
+
 
 -  Segundo, eu conferi se a variancia dos dois grupos ( Data Analyst e Data Especialist) é igual. E isso foi feito pelo teste de Levene que deu esse resultado:
 
 <p align="center">
   <img alt="r1" width="50%" src="https://github.com/user-attachments/assets/878e339d-1e4d-496a-a64c-6522d5472007">
 </p>
-Esse teste nos mostrou que os dois grupos possuem variancia estatisticamente diferentes. Porquê o p-valor é menor do que 0.05, logo rejeitamos a hipotese nula (que as havia homegeneidade nas variancias). 
+- Esse teste nos mostrou que os dois grupos possuem variancia estatisticamente diferentes. Porquê o p-valor é menor do que 0.05, logo rejeitamos a hipotese nula (que as havia homegeneidade nas variancias). 
 -  Importante salientar que as Amostras independentes, estamos falando de dois grupos diferentes os Data Sciestist e Data Analyst
 - 
 
