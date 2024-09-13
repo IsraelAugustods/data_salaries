@@ -10,7 +10,7 @@ Este estudo tem como foco a análise de salários na área de dados, com o objet
 
 ## Fonte dos Dados
 
-Todos os dados utilizados neste projeto foram obtidos de um dataset disponível no [***Kaggle***](https://www.kaggle.com/), acessível [neste link](https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries?select=ds_salaries.csv).
+Todos os dados utilizados neste projeto foram obtidos de um dataset disponível no [***Kaggle***](https://www.kaggle.com/), acessível [neste link](https://www.kaggle.com/code/ahmedismaiil/jobs-and-salaries-in-data-science/input).
 
 O ***Kaggle*** é uma plataforma online voltada para a comunidade de ciência de dados e aprendizado de máquina. Fundada em 2010, o Kaggle permite que usuários de todos os níveis de habilidade participem de competições, acessem datasets gratuitos, pratiquem e desenvolvam habilidades em ciência de dados, além de colaborar com outros membros da comunidade.
 
