@@ -41,7 +41,7 @@ Com a análise desse gráfico, observei que o nível Executive apresenta consist
 
 
 
-## Estatisca
+## Estatística
 
 ###  Um cientista de dados ganha mais, em média, do que um analista de dados?
 
