@@ -21,6 +21,26 @@ O ***Kaggle*** é uma plataforma online voltada para a comunidade de ciência de
 
 ## Destaques do Projeto
 
+### Distribuição de tipos de trabalho (Mais de 1000 pessoas atuando)
+
+Neste conjunto de dados, observei que há uma maior representação de Data Engineers, seguidos por Data Scientists e, por último, Data Analysts. Isso pode refletir tanto a demanda do mercado quanto a amostragem disponível para cada uma dessas profissões.
+
+<p align="center">
+  <img alt="g1" width="50%" src="https://github.com/user-attachments/assets/b8e2c32e-2db6-4734-a9ca-9580497bc77a">
+</p>
+
+
+### Média Salarial por Nível de Experiência e Tamanho da Empresa						
+
+Com a análise desse gráfico, observei que o nível Executive apresenta consistentemente os maiores salários em todas as categorias (L, M, S). Para as categorias L e M, os salários de Mid-level e Senior estão muito próximos, o que sugere que, dependendo do setor ou do tamanho da empresa, a diferença entre esses dois níveis de experiência pode ser mínima. Além disso, o nível Entry-level possui os menores salários em todas as categorias.
+
+<p align="center">
+  <img alt="g1" width="50%" src="https://github.com/user-attachments/assets/9979182d-a24d-4052-a129-60ba6adc83d4">
+</p>
+
+
+
+
 ## Estatisca
 
 ###  Um cientista de dados ganha mais, em média, do que um analista de dados?
@@ -72,18 +92,3 @@ Com isso, concluo que **os cientistas de dados ganham mais que os analistas de d
 
 ## Considerações finais
 
-
-
-
-## Descrição das Colunas 
-- work_year:	The year the salary was paid.
-- experience_level:	The experience level in the job during the year with the following possible values: EN Entry-level / Junior MI Mid-level / Intermediate SE Senior-level / Expert EX Executive-level / Director
-- employment_type:	The type of employement for the role: PT Part-time FT Full-time CT Contract FL Freelance
-- job_title:	The role worked in during the year.
-- salary:	The total gross salary amount paid.
-- salary_currency:	The currency of the salary paid as an ISO 4217 currency code.
-- salary_in_usd:	The salary in USD (FX rate divided by avg. USD rate for the respective year via fxdata.foorilla.com).
-- employee_residence:	Employee's primary country of residence in during the work year as an ISO 3166 country code.
-- remote_ratio:	The overall amount of work done remotely, possible values are as follows: 0 No remote work (less than 20%) 50 Partially remote 100 Fully remote (more than 80%)
-- company_location:	The country of the employer's main office or contracting branch as an ISO 3166 country code.
-- company_size:	The average number of people that worked for the company during the year: S less than 50 employees (small) M 50 to 250 employees (medium) L more than 250 employees (large)
