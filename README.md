@@ -21,40 +21,80 @@ O ***Kaggle*** é uma plataforma online voltada para a comunidade de ciência de
 
 ## Destaques do Projeto
 
+### Distribuição de tipos de trabalho (Mais de 1000 pessoas atuando)
+
+Neste conjunto de dados, observei que há uma maior representação de Data Engineers, seguidos por Data Scientists e, por último, Data Analysts. Isso pode refletir tanto a demanda do mercado quanto a amostragem disponível para cada uma dessas profissões.
+
+<p align="center">
+  <img alt="g1" width="50%" src="https://github.com/user-attachments/assets/b8e2c32e-2db6-4734-a9ca-9580497bc77a">
+</p>
+
+
+### Média Salarial por Nível de Experiência e Tamanho da Empresa						
+
+Com a análise desse gráfico, observei que o nível Executive apresenta consistentemente os maiores salários em todas as categorias (L, M, S). Para as categorias L e M, os salários de Mid-level e Senior estão muito próximos, o que sugere que, dependendo do setor ou do tamanho da empresa, a diferença entre esses dois níveis de experiência pode ser mínima. Além disso, o nível Entry-level possui os menores salários em todas as categorias.
+
+<p align="center">
+  <img alt="g1" width="50%" src="https://github.com/user-attachments/assets/9979182d-a24d-4052-a129-60ba6adc83d4">
+</p>
+
+
+
+
 ## Estatisca
-Data Analyst < Data Sciestist
-- Como eu quero comparar duas médias o teste estatistico ideial é o teste t, que possui alguns pressupostos: Distribuição normal e homogenização da variancia
-- 
-- Primeiramente, fui verificar se dos dados tinham distruição normal, dessa forma foi feito o teste Kolmogorov-Smirnov, que mostra isso estatisticamente, e teve esse resultado:
+
+###  Um cientista de dados ganha mais, em média, do que um analista de dados?
 
 <p align="center">
-  <img alt="r2" width="50%" src="https://github.com/user-attachments/assets/94d0cc61-dabe-466a-89a2-b94fc76135b4">
+  <img alt="t1" width="50%" src="https://github.com/user-attachments/assets/fb39bfd0-7659-47f2-895a-d5e3c4c3a64f">
 </p>
-Com base nesse tabela é possivel afirmar que os dados não possuem distribuição normal. Isso ocorre devido o p-valor menor do que 0.05. Logo nós rejeitamos a hipotese nula (que os dados são normais). 
-É importante salientar que eu utilizei o teste de Shapiro-Wilk já que estou trabalhando com esse dataset que possui poucos dados. Caso tivessemos mais dados o teste correto seria o de Kolmogorov-Smirnov. 
 
--  Segundo, eu conferi se a variancia dos dois grupos ( Data Analyst e Data Especialist) é igual. E isso foi feito pelo teste de Levene que deu esse resultado:
+Ao analisar a tabela acima, parece que os cientistas de dados ganham mais. No entanto, eu precisei realizar uma análise estatística para confirmar essa suposição.
+
+Como meu objetivo era descobrir se, na média, os cientistas de dados ganham mais do que os analistas de dados, apliquei o **teste t**. Esse teste possui alguns pressupostos, como a **distribuição normal dos dados** e a **homogeneidade das variâncias**. Dependendo do resultado desses pressupostos, diferentes variações do teste t podem ser aplicadas.
+
+Primeiro, verifiquei a normalidade dos dados aplicando o teste de **Kolmogorov-Smirnov**, e obtive o seguinte resultado:
 
 <p align="center">
-  <img alt="r1" width="50%" src="https://github.com/user-attachments/assets/878e339d-1e4d-496a-a64c-6522d5472007">
+  <img alt="r1" width="50%" src="https://github.com/user-attachments/assets/281f5c10-5916-420d-8399-68129cc0baf4">
 </p>
-Esse teste nos mostrou que os dois grupos possuem variancia estatisticamente diferentes. Porquê o p-valor é menor do que 0.05, logo rejeitamos a hipotese nula (que as havia homegeneidade nas variancias). 
--  Importante salientar que as Amostras independentes, estamos falando de dois grupos diferentes os Data Sciestist e Data Analyst
-- 
 
+Com base nessa tabela, concluo que os dados **não possuem distribuição normal**, já que o p-valor foi menor que 0,05, o que me levou a rejeitar a hipótese nula (que os dados são normais).
+
+Apesar da ausência de normalidade nos dados, apliquei o **Teorema do Limite Central** (TLC), uma vez que estou lidando com um número considerável de dados. Isso me permitiu considerar que, na média, a distribuição segue uma normalidade.
+
+Ao utilizar o TLC, é essencial analisar os gráficos de frequência ou densidade de cada variável:
+
+<p align="center">
+  <img alt="r2" width="50%" src="https://github.com/user-attachments/assets/5393afee-f91a-459a-b94b-61ca48a69135">
+</p>
+
+Escolhi o teste de **Kolmogorov-Smirnov** devido à grande quantidade de dados. Caso eu estivesse trabalhando com menos amostras, o **teste de Shapiro-Wilk** seria mais adequado.
+
+Em seguida, conferi a **homogeneidade das variâncias** utilizando o **teste de Levene**, e obtive o seguinte resultado:
+
+<p align="center">
+  <img alt="r3" width="50%" src="https://github.com/user-attachments/assets/0ff32d49-40d0-4d3e-9f14-f88f80918b6b">
+</p>
+
+O teste revelou que as variâncias dos dois grupos são **estatisticamente diferentes**, já que o p-valor foi menor que 0,05, o que me levou a rejeitar a hipótese nula (de que há homogeneidade nas variâncias).
+
+Gostaria de salientar que apliquei esses testes em **amostras independentes**, ou seja, estou comparando dois grupos distintos: **Data Scientists** e **Data Analysts**.
+
+Diante dos resultados (distribuição normal dos dados, mas variâncias diferentes), optei por utilizar o **teste t de Welch**, ajustado para diferenças nas variâncias:
+
+<p align="center">
+  <img alt="r4" width="50%" src="https://github.com/user-attachments/assets/82c1c0e4-105c-44f7-8123-7baa2df9f5d5">
+</p>
+
+Com isso, concluo que **os cientistas de dados ganham mais que os analistas de dados**, em média, nesse conjunto de dados. O p-valor do **teste t de Welch** foi menor que 0,05, o que me levou a rejeitar a hipótese nula (de que os cientistas de dados ganham menos ou igual aos analistas de dados).
 
 
 ## Considerações finais
 
-## Descrição das Colunas 
-- work_year:	The year the salary was paid.
-- experience_level:	The experience level in the job during the year with the following possible values: EN Entry-level / Junior MI Mid-level / Intermediate SE Senior-level / Expert EX Executive-level / Director
-- employment_type:	The type of employement for the role: PT Part-time FT Full-time CT Contract FL Freelance
-- job_title:	The role worked in during the year.
-- salary:	The total gross salary amount paid.
-- salary_currency:	The currency of the salary paid as an ISO 4217 currency code.
-- salary_in_usd:	The salary in USD (FX rate divided by avg. USD rate for the respective year via fxdata.foorilla.com).
-- employee_residence:	Employee's primary country of residence in during the work year as an ISO 3166 country code.
-- remote_ratio:	The overall amount of work done remotely, possible values are as follows: 0 No remote work (less than 20%) 50 Partially remote 100 Fully remote (more than 80%)
-- company_location:	The country of the employer's main office or contracting branch as an ISO 3166 country code.
-- company_size:	The average number of people that worked for the company during the year: S less than 50 employees (small) M 50 to 250 employees (medium) L more than 250 employees (large)
+É essencial reconhecer o papel crucial da estatística para um analista de dados. A estatística não apenas ajuda a interpretar dados de maneira eficaz, mas também fornece as ferramentas necessárias para revelar insights profundos e responder a perguntas de negócios com precisão. Sem ela tudo estaria no campo do "achismo". 
+Com uma base de dados como essa, é possível gerar diversos insights valiosos. Aqui, trouxe somente dois que julguei mais interessantes. Para acessar meu trabalho completo e explorar mais insights, [acesse aqui](https://docs.google.com/spreadsheets/d/1S-7tAX4mwNYQxynilAlijx8YZk04gkug/edit?usp=sharing&ouid=103139050864633488874&rtpof=true&sd=true).
+
+
+
+
