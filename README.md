@@ -92,3 +92,9 @@ Com isso, concluo que **os cientistas de dados ganham mais que os analistas de d
 
 ## Considerações finais
 
+É essencial reconhecer o papel crucial da estatística para um analista de dados. A estatística não apenas ajuda a interpretar dados de maneira eficaz, mas também fornece as ferramentas necessárias para revelar insights profundos e responder a perguntas de negócios com precisão. Sem ela tudo estaria no campo do "achismo". 
+Com uma base de dados como essa, é possível gerar diversos insights valiosos. Aqui, trouxe somente dois que julguei mais interessantes. Para acessar meu trabalho completo e explorar mais insights, [acesse aqui](https://docs.google.com/spreadsheets/d/1S-7tAX4mwNYQxynilAlijx8YZk04gkug/edit?usp=sharing&ouid=103139050864633488874&rtpof=true&sd=true).
+
+
+
+
